@@ -18,5 +18,9 @@
     <%= f.input :price, label: "价格" %>
   </div>
 
+  <div class="group">
+    <%= f.input :image, as: :file, label: "产品图片" %>
+  </div>
+
   <%= f.submit "送出", class: 'btn btn-default', data: { disable_with: "上传中……"} %>
 <% end %>
