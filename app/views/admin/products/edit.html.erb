@@ -1,0 +1,22 @@
+<h2> Edit Product </h2>
+
+<%= simple_form_for [:admin, @product] do |f| %>
+
+  <div class="group">
+    <%= f.input :title, label: "产品名称" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :description, label: "产品信息" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :quantity, label: "库存数量" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :price, label: "价格" %>
+  </div>
+
+  <%= f.submit "送出", class: "btn btn-default", data:{ disable_with: '上传中……' } %>
+<% end %>
