@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 20170209085832) do
     t.string   "shipping_address"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
-    t.string   "tokeb"
     t.string   "token"
   end
 
