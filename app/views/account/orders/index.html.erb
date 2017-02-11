@@ -1,0 +1,22 @@
+<h2>订单列表</h2>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>订单编号</th>
+      <th>生成时间</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+    <tr>
+      <td>
+        <%= link_to(order.id, order_path(order.token)) %>
+      </td>
+      <td>
+        <%= order.created_at.to_s(:long) %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
