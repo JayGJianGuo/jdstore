@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  resources :orders do
-    member do
-      post :pay_with_alipay
-      post :pay_with_wechat
-    end
-  end
 
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -39,4 +33,13 @@ Rails.application.routes.draw do
   namespace :account do
     resources :orders
   end
+
+  resources :orders do
+    member do
+      post :pay_with_alipay
+      post :pay_with_wechat
+      post :apply_to_cancel
+    end
+  end
+
 end
