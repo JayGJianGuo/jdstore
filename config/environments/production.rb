@@ -87,13 +87,13 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => "https://damp-thicket-85629.herokuapp.com/"}
 
   config.action_mailer.delivery_method = :smtp
-  ActionMailer::Base.stmp_settings = {
+  ActionMailer::Base.smtp_settings = {
     address: "smtpcloud.sohu.com",
     port: 25,
     domain: "heroku.com"
     authentication: "login",
     enable_starttls_auto: true,
     user_name: ENV["SEND_CLOUD_USER_NAME"],
-    password: ENV["SEND_CLOUUD_USER_KEY"]
+    password: ENV["SEND_CLOUD_USER_KEY"]
   }
 end
